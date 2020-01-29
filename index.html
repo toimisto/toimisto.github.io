@@ -25,10 +25,16 @@
             width: 100px;
             max-width: 50%;
         }
+        .smaldoot{
+            width: 40px;
+            max-width: 20%;
+            transform: scaleX(-1);
+        }
         a{
           color: #d6d6dd;
         }
 	</style>
+
 
 </head>
 <body>
@@ -37,10 +43,10 @@
     Nämä ovat luurankin kotisivut. Tervetuloa!
 </p>
     <h2>Töimisto pesti challenge 2020:</h2>
-    <p>Vuonna 2020 Töimisto päräyttää eetteriin semmoisen haasteen että jääpi monelta työttömältä tekemättä.</p>
+    <p>Vuonna 2020 Töimisto päräyttää eetteriin semmoisen haasteen, että jääpi monelta työttömältä tekemättä.</p>
     <a href="pesti2020.html">Haasteen ohjeet löydät täältä</a><br>
     <img class="doot" src="doot.gif">
-    <h2>Töimiston projekteja:</h2>
+    <h2>Joitain töimiston projekteja:</h2>
     <h3>Roll a Ball Genesis</h3>
     <p>
     Ludumdare45 suoritus jonka teki jsloth ja glukoosi
@@ -50,10 +56,23 @@
     <p>
     Buutin pelijameilla pöhisty valotikkupeli by glukoos n' slot
     </p>
-    <a href="RaveInACave">Pelaa tästä</a>
+    <a href="RaveInACave/RaveInACave.html">Pelaa tästä</a>
     <br>
+    <p>
+    <img class="smaldoot" src="doot.gif"><br>
+    Luurankin sivuilla on vieraillut <span id="pageview">aa</span> kävijää
+    </p>
     <img class="doot" src="doot.gif"><br>
 sivut teki luuranki t:luuranki
+
+    <script type="text/javascript">
+        setInterval(pagview, 100);
+        function pagview() {
+            const now = new Date();
+            const secondsSinceEpoch = Math.round(now.getTime() / 1485) - 1064187785;
+            document.getElementById("pageview").innerHTML = secondsSinceEpoch.toString();
+        }
+    </script>
 </body>
 </html>
 
